@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#e6f4f5" />
+  <title>Pembayaran — WaterTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pembayaran.css" />
+</head>
+<body>
+
+  <!-- ============ SPLASH SCREEN ============ -->
+  <div id="splash" class="splash" aria-hidden="true">
+    <div class="splash__logo">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 6C32 6 12 28 12 40a20 20 0 0 0 40 0C52 28 32 6 32 6Z" fill="#7fb8d0"/>
+        <path d="M22 40a10 10 0 0 0 10 10" stroke="#ffffff" stroke-width="2.5"
+              stroke-linecap="round" fill="none" opacity="0.9"/>
+      </svg>
+      <span>WaterTech</span>
+    </div>
+  </div>
+
+  <!-- ============ MAIN APP ============ -->
+  <main id="app" class="app">
+
+    <section class="card">
+      <h1 class="card__title">Pembayaran</h1>
+
+      <!-- Status menunggu -->
+      <div class="waiting">
+        <p class="waiting__text">Menunggu pembayaran...</p>
+        <div class="waiting__timer">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span id="timer">05:00</span>
+        </div>
+      </div>
+
+      <!-- QR Frame -->
+      <div class="qr-frame">
+        <div class="qr-box" id="qrBox"></div>
+      </div>
+
+      <!-- Harga -->
+      <div class="price">
+        <span class="price__value">Rp <span id="priceValue">1.000</span></span>
+        <span class="price__hint">Scan kode QR di atas</span>
+      </div>
+
+      <!-- Tombol demo -->
+      <button class="btn-outline" id="demoBtn">Selesaikan Pembayaran (Demo)</button>
+    </section>
+
+    <footer class="brand-footer">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none">
+        <path d="M12 3C12 3 5 11 5 15.5A7 7 0 0 0 19 15.5C19 11 12 3 12 3Z"
+              stroke="#9bb2c0" stroke-width="1.6" stroke-linejoin="round"/>
+      </svg>
+      <span>WaterTech</span>
+    </footer>
+
+  </main>
+
+  <script src="pembayaran.js"></script>
+</body>
+</html>

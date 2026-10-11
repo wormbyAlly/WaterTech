@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#e6f4f5" />
+  <title>WaterTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ SPLASH SCREEN ============ -->
+  <div id="splash" class="splash" aria-hidden="true">
+    <div class="splash__logo">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 6C32 6 12 28 12 40a20 20 0 0 0 40 0C52 28 32 6 32 6Z" fill="#7fb8d0"/>
+        <path d="M22 40a10 10 0 0 0 10 10" stroke="#ffffff" stroke-width="2.5"
+              stroke-linecap="round" fill="none" opacity="0.9"/>
+      </svg>
+      <span>WaterTech</span>
+    </div>
+  </div>
+
+  <!-- ============ MAIN APP ============ -->
+  <main id="app" class="app" hidden>
+
+    <section class="card">
+      <h1 class="card__title">Pilih Volume</h1>
+
+      <!-- ===== CONTAINER VISUAL (4 SVG) ===== -->
+      <div class="cup-selector">
+        <button class="cup-arrow" id="prevPreset" aria-label="Sebelumnya">
+          <svg viewBox="0 0 24 24"><path d="M15 6L9 12l6 6" fill="none" stroke="currentColor"
+            stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <div class="cup-visual">
+
+          <!-- ===== CUP (200ml) ===== -->
+          <svg class="cup-svg" data-preset="cup" viewBox="0 0 140 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <clipPath id="clip-cup">
+                <path d="M 38 60 L 48 180 Q 49 192 60 192 L 80 192 Q 91 192 92 180 L 102 60 Z"/>
+              </clipPath>
+            </defs>
+            <g clip-path="url(#clip-cup)">
+              <rect class="water" x="0" y="0" width="140" height="220" fill="#a8d0e0"/>
+            </g>
+            <path d="M 38 60 L 48 180 Q 49 192 60 192 L 80 192 Q 91 192 92 180 L 102 60 Z"
+                  fill="none" stroke="#c5dce5" stroke-width="2.5" stroke-linejoin="round"/>
+            <rect x="34" y="52" width="72" height="8" rx="4"
+                  fill="#ffffff" stroke="#c5dce5" stroke-width="2.5"/>
+            <text class="water-label" x="70" y="0" text-anchor="middle"
+                  font-family="Poppins, sans-serif" font-size="11"
+                  font-weight="600" fill="#ffffff">200ml</text>
+          </svg>
+
+          <!-- ===== BOTOL (700ml) ===== -->
+          <svg class="cup-svg" data-preset="bottle" viewBox="0 0 140 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <clipPath id="clip-bottle">
+                <path d="M 56 58 L 56 72 Q 40 80 40 100 L 40 182 Q 40 195 55 195 L 85 195 Q 100 195 100 182 L 100 100 Q 100 80 84 72 L 84 58 Z"/>
+              </clipPath>
+            </defs>
+            <g clip-path="url(#clip-bottle)">
+              <rect class="water" x="0" y="0" width="140" height="220" fill="#a8d0e0"/>
+            </g>
+            <path d="M 56 58 L 56 72 Q 40 80 40 100 L 40 182 Q 40 195 55 195 L 85 195 Q 100 195 100 182 L 100 100 Q 100 80 84 72 L 84 58 Z"
+                  fill="none" stroke="#c5dce5" stroke-width="2.5" stroke-linejoin="round"/>
+            <rect x="54" y="45" width="32" height="15" rx="3"
+                  fill="#7fb8d0" stroke="#5a9fbd" stroke-width="2"/>
+            <text class="water-label" x="70" y="0" text-anchor="middle"
+                  font-family="Poppins, sans-serif" font-size="11"
+                  font-weight="600" fill="#ffffff">700ml</text>
+          </svg>
+
+          <!-- ===== BOTOL BESAR (2L) ===== -->
+          <svg class="cup-svg" data-preset="bigbottle" viewBox="0 0 140 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <clipPath id="clip-bigbottle">
+                <path d="M 54 55 L 54 70 Q 34 78 34 105 L 34 185 Q 34 200 50 200 L 90 200 Q 106 200 106 185 L 106 105 Q 106 78 86 70 L 86 55 Z"/>
+              </clipPath>
+            </defs>
+            <g clip-path="url(#clip-bigbottle)">
+              <rect class="water" x="0" y="0" width="140" height="220" fill="#a8d0e0"/>
+            </g>
+            <path d="M 54 55 L 54 70 Q 34 78 34 105 L 34 185 Q 34 200 50 200 L 90 200 Q 106 200 106 185 L 106 105 Q 106 78 86 70 L 86 55 Z"
+                  fill="none" stroke="#c5dce5" stroke-width="2.5" stroke-linejoin="round"/>
+            <rect x="52" y="42" width="36" height="16" rx="3"
+                  fill="#7fb8d0" stroke="#5a9fbd" stroke-width="2"/>
+            <!-- garis label tengah -->
+            <rect x="42" y="120" width="56" height="30" rx="4"
+                  fill="none" stroke="#c5dce5" stroke-width="1.5" opacity="0.7"/>
+            <text class="water-label" x="70" y="0" text-anchor="middle"
+                  font-family="Poppins, sans-serif" font-size="11"
+                  font-weight="600" fill="#ffffff">2L</text>
+          </svg>
+
+          <!-- ===== GALON (15L) ===== -->
+          <svg class="cup-svg" data-preset="gallon" viewBox="0 0 140 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <clipPath id="clip-gallon">
+                <path d="M 56 62 L 56 76 Q 28 86 28 122 L 28 196 Q 28 208 42 208 L 98 208 Q 112 208 112 196 L 112 122 Q 112 86 84 76 L 84 62 Z"/>
+              </clipPath>
+            </defs>
+            <g clip-path="url(#clip-gallon)">
+              <rect class="water" x="0" y="0" width="140" height="220" fill="#a8d0e0"/>
+            </g>
+            <path d="M 56 62 L 56 76 Q 28 86 28 122 L 28 196 Q 28 208 42 208 L 98 208 Q 112 208 112 196 L 112 122 Q 112 86 84 76 L 84 62 Z"
+                  fill="none" stroke="#c5dce5" stroke-width="2.5" stroke-linejoin="round"/>
+            <!-- tutup atas -->
+            <rect x="54" y="48" width="32" height="16" rx="3"
+                  fill="#7fb8d0" stroke="#5a9fbd" stroke-width="2"/>
+            <!-- handle atas -->
+            <path d="M 60 62 Q 60 48 70 48 Q 80 48 80 62"
+                  fill="none" stroke="#c5dce5" stroke-width="2.5" stroke-linejoin="round"/>
+            <text class="water-label" x="70" y="0" text-anchor="middle"
+                  font-family="Poppins, sans-serif" font-size="11"
+                  font-weight="600" fill="#ffffff">15L</text>
+          </svg>
+
+        </div>
+
+        <button class="cup-arrow" id="nextPreset" aria-label="Berikutnya">
+          <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor"
+            stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <p class="cup-caption" id="cupCaption">CUP (MAX 200ML)</p>
+
+      <!-- ===== VOLUME CONTROL ===== -->
+      <div class="volume-control">
+        <button class="volume-control__btn" id="minusVol" aria-label="Kurangi">
+          <svg viewBox="0 0 24 24"><path d="M6 12h12" stroke="currentColor"
+            stroke-width="2.4" stroke-linecap="round"/></svg>
+        </button>
+        <div class="volume-control__value">
+          <span id="volValue">200</span>
+          <span class="volume-control__unit">ml</span>
+        </div>
+        <button class="volume-control__btn" id="plusVol" aria-label="Tambah">
+          <svg viewBox="0 0 24 24"><path d="M12 6v12M6 12h12" stroke="currentColor"
+            stroke-width="2.4" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+      <!-- ===== TOTAL ===== -->
+      <div class="total">
+        <span class="total__label">Total Bayar:</span>
+        <span class="total__value">Rp <span id="totalPrice">1.000</span></span>
+      </div>
+
+      <button class="btn-primary" id="payBtn">Bayar dengan QRIS</button>
+    </section>
+
+    <footer class="brand-footer">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none">
+        <path d="M12 3C12 3 5 11 5 15.5A7 7 0 0 0 19 15.5C19 11 12 3 12 3Z"
+              stroke="#9bb2c0" stroke-width="1.6" stroke-linejoin="round"/>
+      </svg>
+      <span>WaterTech</span>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

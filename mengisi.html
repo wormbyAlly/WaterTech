@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#e6f4f5" />
+  <title>Mengisi — WaterTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="mengisi.css" />
+</head>
+<body>
+
+  <!-- ============ SPLASH ============ -->
+  <div id="splash" class="splash" aria-hidden="true">
+    <div class="splash__logo">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 6C32 6 12 28 12 40a20 20 0 0 0 40 0C52 28 32 6 32 6Z" fill="#7fb8d0"/>
+        <path d="M22 40a10 10 0 0 0 10 10" stroke="#ffffff" stroke-width="2.5"
+              stroke-linecap="round" fill="none" opacity="0.9"/>
+      </svg>
+      <span>WaterTech</span>
+    </div>
+  </div>
+
+  <!-- ============ MAIN APP ============ -->
+  <main id="app" class="app">
+
+    <section class="card">
+      <h1 class="card__title">Mengisi...</h1>
+
+      <!-- Dekorasi kecil di atas -->
+      <div class="deco" aria-hidden="true">
+        <span class="deco__dot"></span>
+        <span class="deco__line"></span>
+        <span class="deco__dot"></span>
+      </div>
+
+      <!-- Wadah + air -->
+      <div class="cup-visual">
+        <!-- CUP -->
+        <svg class="cup-svg" data-preset="cup" viewBox="0 0 140 220" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="clip-cup">
+              <path d="M 38 60 L 48 180 Q 49 192 60 192 L 80 192 Q 91 192 92 180 L 102 60 Z"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#clip-cup)">
+            <rect class="water" x="0" y="0" width="140" height="230" fill="#a8d0e0"/>
+          </g>
+          <path d="M 38 60 L 48 180 Q 49 192 60 192 L 80 192 Q 91 192 92 180 L 102 60 Z"
+                fill="none" stroke="#c5dce5" stroke-width="2.5" stroke-linejoin="round"/>
+          <rect x="34" y="52" width="72" height="8" rx="4"
+                fill="#ffffff" stroke="#c5dce5" stroke-width="2.5"/>
+        </svg>
+
+        <!-- BOTOL -->
+        <svg class="cup-svg" data-preset="bottle" viewBox="0 0 140 220" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="clip-bottle">
+              <path d="M 56 58 L 56 72 Q 40 80 40 100 L 40 182 Q 40 195 55 195 L 85 195 Q 100 195 100 182 L 100 100 Q 100 80 84 72 L 84 58 Z"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#clip-bottle)">
+            <rect class="water" x="0" y="0" width="140" height="230" fill="#a8d0e0"/>
+          </g>
+          <path d="M 56 58 L 56 72 Q 40 80 40 100 L 40 182 Q 40 195 55 195 L 85 195 Q 100 195 100 182 L 100 100 Q 100 80 84 72 L 84 58 Z"
+                fill="none" stroke="#c5dce5" stroke-width="2.5" stroke-linejoin="round"/>
+          <rect x="54" y="45" width="32" height="15" rx="3"
+                fill="#7fb8d0" stroke="#5a9fbd" stroke-width="2"/>
+        </svg>
+
+        <!-- BOTOL BESAR -->
+        <svg class="cup-svg" data-preset="bigbottle" viewBox="0 0 140 220" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="clip-bigbottle">
+              <path d="M 54 55 L 54 70 Q 34 78 34 105 L 34 185 Q 34 200 50 200 L 90 200 Q 106 200 106 185 L 106 105 Q 106 78 86 70 L 86 55 Z"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#clip-bigbottle)">
+            <rect class="water" x="0" y="0" width="140" height="230" fill="#a8d0e0"/>
+          </g>
+          <path d="M 54 55 L 54 70 Q 34 78 34 105 L 34 185 Q 34 200 50 200 L 90 200 Q 106 200 106 185 L 106 105 Q 106 78 86 70 L 86 55 Z"
+                fill="none" stroke="#c5dce5" stroke-width="2.5" stroke-linejoin="round"/>
+          <rect x="52" y="42" width="36" height="16" rx="3"
+                fill="#7fb8d0" stroke="#5a9fbd" stroke-width="2"/>
+        </svg>
+
+        <!-- GALON -->
+        <svg class="cup-svg" data-preset="gallon" viewBox="0 0 140 220" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="clip-gallon">
+              <path d="M 56 62 L 56 76 Q 28 86 28 122 L 28 196 Q 28 208 42 208 L 98 208 Q 112 208 112 196 L 112 122 Q 112 86 84 76 L 84 62 Z"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#clip-gallon)">
+            <rect class="water" x="0" y="0" width="140" height="230" fill="#a8d0e0"/>
+          </g>
+          <path d="M 56 62 L 56 76 Q 28 86 28 122 L 28 196 Q 28 208 42 208 L 98 208 Q 112 208 112 196 L 112 122 Q 112 86 84 76 L 84 62 Z"
+                fill="none" stroke="#c5dce5" stroke-width="2.5" stroke-linejoin="round"/>
+          <rect x="54" y="48" width="32" height="16" rx="3"
+                fill="#7fb8d0" stroke="#5a9fbd" stroke-width="2"/>
+          <path d="M 60 62 Q 60 48 70 48 Q 80 48 80 62"
+                fill="none" stroke="#c5dce5" stroke-width="2.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <!-- Progress -->
+      <div class="progress">
+        <div class="progress__bar">
+          <div class="progress__fill" id="progressFill"></div>
+        </div>
+        <div class="progress__value">
+          <span id="currentVol">0</span>
+          <span class="progress__unit">ml</span>
+        </div>
+      </div>
+
+      <!-- Warning -->
+      <div class="warning">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+          <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+          <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Mohon jangan tinggalkan<br/>halaman ini</span>
+      </div>
+    </section>
+
+    <footer class="brand-footer">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none">
+        <path d="M12 3C12 3 5 11 5 15.5A7 7 0 0 0 19 15.5C19 11 12 3 12 3Z"
+              stroke="#9bb2c0" stroke-width="1.6" stroke-linejoin="round"/>
+      </svg>
+      <span>WaterTech</span>
+    </footer>
+
+  </main>
+
+  <!-- ============ MODAL DETEKSI WADAH ============ -->
+  <div class="modal" id="detectModal" role="dialog" aria-modal="true">
+    <div class="modal__card">
+      <div class="modal__icon">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Sensor / scan icon -->
+          <circle cx="32" cy="32" r="22" stroke="#7fb8d0" stroke-width="2" stroke-dasharray="4 4" opacity="0.5"/>
+          <path d="M 24 20 L 30 46 Q 31 50 36 50 L 44 50 Q 49 50 50 46 L 56 20 Z"
+                fill="#d5eaf2" stroke="#7fb8d0" stroke-width="2.5"
+                stroke-linejoin="round" transform="translate(-8 -2)"/>
+        </svg>
+      </div>
+      <h2 class="modal__title">Letakkan Wadah Anda</h2>
+      <p class="modal__text">
+        Sensor belum mendeteksi wadah.<br/>
+        Pastikan wadah berada tepat di bawah keran.
+      </p>
+      <p class="modal__hint">Ketuk di mana saja untuk melanjutkan</p>
+    </div>
+  </div>
+
+  <script src="mengisi.js"></script>
+</body>
+</html>
